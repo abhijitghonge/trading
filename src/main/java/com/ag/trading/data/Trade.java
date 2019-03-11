@@ -9,15 +9,17 @@ import java.time.format.DateTimeFormatter;
 
 public class Trade {
 
-    private LocalDate tradeDate ;
+    private LocalDate tradeDate;
     private String security;
     private String transactionType;
     private Double price;
     private Double quantity;
     private BigDecimal amount;
-    private Trade(){}
 
-    public static Trade of(String[] values){
+    private Trade() {
+    }
+
+    public static Trade of(String[] values) {
         Trade trade = new Trade();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yy");
         trade.tradeDate = LocalDate.parse(values[0], formatter);

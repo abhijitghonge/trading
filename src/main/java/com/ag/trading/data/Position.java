@@ -2,6 +2,7 @@ package com.ag.trading.data;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Position {
     private LocalDate asOfDate;
@@ -62,5 +63,23 @@ public class Position {
                 ", cost=" + cost +
                 ", gainLoss=" + gainLoss +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Position)) return false;
+        Position position = (Position) o;
+        return Objects.equals(asOfDate, position.asOfDate) &&
+                Objects.equals(security, position.security) &&
+                Objects.equals(quantity, position.quantity) &&
+                Objects.equals(cost, position.cost) &&
+                Objects.equals(gainLoss, position.gainLoss);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(asOfDate, security, quantity, cost, gainLoss);
     }
 }

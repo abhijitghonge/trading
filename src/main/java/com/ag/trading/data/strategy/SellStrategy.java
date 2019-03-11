@@ -22,14 +22,13 @@ public class SellStrategy implements TransactionTypeStrategy {
 
         } else {
             //selling quantity is more than previous quantity, get the negative quantity
-            Double negativeQuantity = totalSaleQuantity - previousQuantity;
-            Position zeroPositionWithGains = computeGains(previousPosition, trade, previousQuantity, previousQuantity);
+            Double negativeQuantity = previousQuantity - totalSaleQuantity ;
+            BigDecimal proportionateSalesCost = trade.getAmount().multiply(new BigDecimal(previousQuantity)).divide(new BigDecimal(totalSaleQuantity), BigDecimal.ROUND_CEILING);
+
             //extract gains
-            BigDecimal gainloss = zeroPositionWithGains.getGainLoss();
+            BigDecimal gainloss = proportionateSalesCost.subtract(previousPosition.getCost());
             //Cost to be associated is preivous cost + gains - total sale amount
-            BigDecimal negativeCost = previousPosition.getCost()
-                    .add(gainloss)
-                    .subtract(trade.getAmount());
+            BigDecimal negativeCost = proportionateSalesCost.subtract(trade.getAmount());
             return new Position(trade.getTradeDate(), trade.getSecurity(), negativeQuantity, negativeCost, gainloss);
         }
 
