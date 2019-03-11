@@ -85,8 +85,59 @@ public class SellStrategyTest {
         Position expectedPosition = new Position(LocalDate.of(2017,12,11)
                 ,"Adani Ports and Special Economic Zone"
                 ,20.0
-                , new BigDecimal("7593.96")
-                , new BigDecimal("8045.32"));
+                , new BigDecimal("7593.97")
+                , new BigDecimal("8045.33"));
+        Assert.assertEquals(expectedPosition, position);
+
+
+    }
+
+    @Test
+    public void testFirstSell() {
+
+
+        Trade sellTrade = Trade.of(new String[]{
+                "11-Dec-17","Adani Ports and Special Economic Zone","Sell","391.75","7","10703.21"
+        });
+
+        Map<String, NavigableMap<LocalDate, Position>> securityPositionsMap = Positions.INSTANCE.getSecurityPositionsMap();
+        securityPositionsMap.clear();
+        Position position = sellStrategy.compute(null, sellTrade);
+        Position expectedPosition = new Position(LocalDate.of(2017,12,11)
+                ,"Adani Ports and Special Economic Zone"
+                ,-7.0
+                , new BigDecimal("-10703.21")
+                , new BigDecimal("0"));
+        Assert.assertEquals(expectedPosition, position);
+
+
+    }
+
+    @Test
+    public void testOnInitialShortPosition() {
+        Trade sellTrade = Trade.of(new String[]{
+                "11-Dec-17","Adani Ports and Special Economic Zone","Sell","391.75","7","10703.21"
+        });
+
+        Map<String, NavigableMap<LocalDate, Position>> securityPositionsMap = Positions.INSTANCE.getSecurityPositionsMap();
+        securityPositionsMap.clear();
+        Position previousPosition = sellStrategy.compute(null, sellTrade);
+        NavigableMap<LocalDate, Position> localDatePositionMap = new TreeMap<>();
+
+        securityPositionsMap.put(sellTrade.getSecurity(), localDatePositionMap);
+
+        Trade sellTrade2 = Trade.of(new String[]{
+                "11-Dec-17","Adani Ports and Special Economic Zone","Sell","391.75","7","10703.21"
+        });
+
+        securityPositionsMap = Positions.INSTANCE.getSecurityPositionsMap();
+
+        Position position = sellStrategy.compute(previousPosition, sellTrade2);
+        Position expectedPosition = new Position(LocalDate.of(2017,12,11)
+                ,"Adani Ports and Special Economic Zone"
+                ,-14.0
+                , new BigDecimal("-21406.42")
+                , BigDecimal.ZERO);
         Assert.assertEquals(expectedPosition, position);
 
 

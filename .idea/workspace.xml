@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97a67db3-fde7-4050-8e63-f390efb17e5d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ag/trading/data/strategy/SellStrategyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ag/trading/data/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ag/trading/data/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ag/trading/data/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ag/trading/data/Trade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/BuyStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/BuyStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/SellStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/SellStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ag/trading/consume/DeltaBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ag/trading/consume/DeltaBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ag/trading/consume/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ag/trading/consume/MainApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ag/trading/consume/TradeProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ag/trading/consume/TradeProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ag/trading/data/Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ag/trading/data/Position.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ag/trading/data/strategy/SellStrategyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ag/trading/data/strategy/SellStrategyTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +22,8 @@
       <file leaf-file-name="BuyStrategy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/BuyStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="188">
+              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,8 +34,17 @@
       <file leaf-file-name="SellStrategy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/SellStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="187">
+              <caret line="33" column="116" selection-start-line="33" selection-start-column="116" selection-end-line="33" selection-end-column="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigDecimal.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/math/BigDecimal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-697">
+              <caret line="329" column="35" selection-start-line="329" selection-start-column="35" selection-end-line="329" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -48,8 +52,8 @@
       <file leaf-file-name="SellStrategyTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/ag/trading/data/strategy/SellStrategyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+            <state relative-caret-position="209">
+              <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -103,20 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DividendStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/DividendStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="153">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -178,13 +173,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/TransactionTypeStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/data/Trades.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/consume/GainLossCalculator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/BuyStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/DividendStrategy.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/data/Position.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/data/Trade.java" />
         <option value="$PROJECT_DIR$/src/test/test-resources/trades.csv" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/BuyStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/SellStrategy.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ag/trading/data/strategy/SellStrategyTest.java" />
       </list>
@@ -248,46 +243,6 @@
             </path>
             <path>
               <item name="trading" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trading" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trading" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trading" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trading" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trading" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="trading" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trading" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trading" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="trading" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trading" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trading" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="trading" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="strategy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trading" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -335,17 +290,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.SellStrategyTest">
-    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ag.trading.consume.MainApplication" />
-      <module name="trading" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ag.trading.consume.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -372,7 +316,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="SellStrategyTest.compute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SellStrategyTest.testFirstSell" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trading" />
       <extension name="coverage">
         <pattern>
@@ -384,7 +328,30 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.ag.trading.data.strategy" />
       <option name="MAIN_CLASS_NAME" value="com.ag.trading.data.strategy.SellStrategyTest" />
-      <option name="METHOD_NAME" value="compute" />
+      <option name="METHOD_NAME" value="testFirstSell" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SellStrategyTest.testOnInitialShortPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trading" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ag.trading.data.strategy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ag.trading.data.strategy" />
+      <option name="MAIN_CLASS_NAME" value="com.ag.trading.data.strategy.SellStrategyTest" />
+      <option name="METHOD_NAME" value="testOnInitialShortPosition" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -480,19 +447,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.MainApplication" />
-      <item itemvalue="JUnit.SellStrategyTest.compute" />
       <item itemvalue="JUnit.SellStrategyTest" />
       <item itemvalue="JUnit.SellStrategyTest.testSellMoreWithGain" />
       <item itemvalue="JUnit.SellStrategyTest.testSellLessWithGain" />
+      <item itemvalue="JUnit.SellStrategyTest.testFirstSell" />
+      <item itemvalue="JUnit.SellStrategyTest.testOnInitialShortPosition" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SellStrategyTest" />
         <item itemvalue="JUnit.SellStrategyTest.testSellLessWithGain" />
+        <item itemvalue="JUnit.SellStrategyTest.testOnInitialShortPosition" />
+        <item itemvalue="JUnit.SellStrategyTest.testFirstSell" />
         <item itemvalue="JUnit.SellStrategyTest.testSellMoreWithGain" />
-        <item itemvalue="JUnit.SellStrategyTest.compute" />
-        <item itemvalue="Application.MainApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -510,35 +477,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SellStrategyTest_compute - 2019.03.11 at 20h 49m 29s.xml">
-      <configuration name="SellStrategyTest.compute" configurationId="JUnit" />
+    <history-entry file="SellStrategyTest_testFirstSell - 2019.03.11 at 21h 47m 34s.xml">
+      <configuration name="SellStrategyTest.testFirstSell" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellStrategyTest_compute - 2019.03.11 at 20h 50m 15s.xml">
-      <configuration name="SellStrategyTest.compute" configurationId="JUnit" />
+    <history-entry file="SellStrategyTest - 2019.03.11 at 21h 47m 42s.xml">
+      <configuration name="SellStrategyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellStrategyTest_testSellMoreWithGain - 2019.03.11 at 21h 01m 54s.xml">
-      <configuration name="SellStrategyTest.testSellMoreWithGain" configurationId="JUnit" />
+    <history-entry file="SellStrategyTest_testOnInitialShortPosition - 2019.03.11 at 21h 59m 36s.xml">
+      <configuration name="SellStrategyTest.testOnInitialShortPosition" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellStrategyTest_testSellMoreWithGain - 2019.03.11 at 21h 09m 12s.xml">
-      <configuration name="SellStrategyTest.testSellMoreWithGain" configurationId="JUnit" />
+    <history-entry file="SellStrategyTest - 2019.03.11 at 22h 00m 04s.xml">
+      <configuration name="SellStrategyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellStrategyTest_testSellMoreWithGain - 2019.03.11 at 21h 16m 41s.xml">
-      <configuration name="SellStrategyTest.testSellMoreWithGain" configurationId="JUnit" />
+    <history-entry file="SellStrategyTest - 2019.03.11 at 22h 36m 11s.xml">
+      <configuration name="SellStrategyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellStrategyTest_testSellMoreWithGain - 2019.03.11 at 21h 18m 33s.xml">
-      <configuration name="SellStrategyTest.testSellMoreWithGain" configurationId="JUnit" />
+    <history-entry file="SellStrategyTest - 2019.03.11 at 22h 37m 14s.xml">
+      <configuration name="SellStrategyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SellStrategyTest_testSellMoreWithGain - 2019.03.11 at 21h 23m 00s.xml">
-      <configuration name="SellStrategyTest.testSellMoreWithGain" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SellStrategyTest_testSellMoreWithGain - 2019.03.11 at 21h 23m 14s.xml">
-      <configuration name="SellStrategyTest.testSellMoreWithGain" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SellStrategyTest_testSellMoreWithGain - 2019.03.11 at 21h 23m 37s.xml">
-      <configuration name="SellStrategyTest.testSellMoreWithGain" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SellStrategyTest_testSellLessWithGain - 2019.03.11 at 21h 32m 29s.xml">
+    <history-entry file="SellStrategyTest_testSellLessWithGain - 2019.03.11 at 22h 50m 44s.xml">
       <configuration name="SellStrategyTest.testSellLessWithGain" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SellStrategyTest - 2019.03.11 at 22h 51m 56s.xml">
+      <configuration name="SellStrategyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SellStrategyTest - 2019.03.11 at 22h 55m 14s.xml">
+      <configuration name="SellStrategyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SellStrategyTest - 2019.03.11 at 22h 57m 38s.xml">
+      <configuration name="SellStrategyTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -558,7 +525,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497151" weight="0.27114093" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497151" visible="true" weight="0.27114093" />
       <window_info id="Structure" order="1" sideWeight="0.502849" side_tool="true" weight="0.2671141" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -611,23 +578,25 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/SellStrategy.java</url>
-          <line>25</line>
+          <line>28</line>
           <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string />
+        <expression-string>previousPosition.getCost()
+                .multiply(new BigDecimal(totalSaleQuantity))
+                .divide(new BigDecimal(previousQuantity), BigDecimal.ROUND_CEILING)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string />
+        <expression-string>previousPosition.getCost().multiply(new BigDecimal(totalSaleQuantity))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -871,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/math/BigDecimal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="4435" column="30" selection-start-line="4435" selection-start-column="30" selection-end-line="4435" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/BufferedReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -984,30 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/BuyStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test-resources/trades.csv">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1054,17 +992,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/math/BigDecimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-697">
+          <caret line="329" column="35" selection-start-line="329" selection-start-column="35" selection-end-line="329" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/BuyStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ag/trading/data/strategy/SellStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="187">
+          <caret line="33" column="116" selection-start-line="33" selection-start-column="116" selection-end-line="33" selection-end-column="116" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/ag/trading/data/strategy/SellStrategyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+        <state relative-caret-position="209">
+          <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
         </state>
       </provider>
     </entry>
