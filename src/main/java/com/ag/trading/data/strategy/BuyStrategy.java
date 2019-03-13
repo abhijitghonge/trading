@@ -4,6 +4,7 @@ import com.ag.trading.data.Position;
 import com.ag.trading.data.Trade;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class BuyStrategy implements TransactionTypeStrategy {
     @Override
@@ -16,29 +17,46 @@ public class BuyStrategy implements TransactionTypeStrategy {
         //Since we can buy only upto last short position
         Double totalBuyQuantity = trade.getQuantity();
 
-        //if selling quantity is less than or equal to previous position quantity
+        //if buy quantity is 0 or more than 0, then simply add to previous position
         if (previousQuantity >= 0.0) {
             return addBuy(previousPosition, trade, previousQuantity, totalBuyQuantity);
 
         } else {
             //get the overflowing buy quantity
-            Double negativeQuantity = previousQuantity + totalBuyQuantity;
-            BigDecimal proportionateSalesCost = trade.getAmount().multiply(new BigDecimal(previousQuantity)).divide(new BigDecimal(totalBuyQuantity), BigDecimal.ROUND_CEILING);
+            Double remainingQuantity = previousQuantity + totalBuyQuantity;
 
-            //extract gains
-            BigDecimal gainloss = proportionateSalesCost.subtract(previousPosition.getCost());
-            //Cost to be associated is preivous cost + gains - total sale amount
-            BigDecimal negativeCost = proportionateSalesCost.subtract(trade.getAmount());
-            return new Position(trade.getTradeDate(), trade.getSecurity(), negativeQuantity, negativeCost, gainloss);
+            if(remainingQuantity <= 0 ){
+                BigDecimal proportionalRemainingCost = previousPosition.getCost()
+                        .multiply(new BigDecimal(remainingQuantity))
+                        .divide(new BigDecimal(previousQuantity),BigDecimal.ROUND_CEILING);
+                BigDecimal gainloss = previousPosition.getCost()
+                        .subtract(proportionalRemainingCost)
+                        .add(trade.getAmount())
+                        .multiply(new BigDecimal("-1.00"));
+                return new Position(trade.getTradeDate(), trade.getSecurity(), remainingQuantity, proportionalRemainingCost, gainloss);
+
+            }else{
+                BigDecimal proportionalCloseOutCost = trade.getAmount()
+                        .multiply(new BigDecimal(previousQuantity))
+                        .divide(new BigDecimal(totalBuyQuantity), BigDecimal.ROUND_CEILING);
+                BigDecimal gainloss = previousPosition.getCost()
+                        .subtract(proportionalCloseOutCost)
+                        .multiply(BigDecimal.valueOf( -1));
+                BigDecimal buyCost = trade.getAmount()
+                        .add(proportionalCloseOutCost);
+                return new Position(trade.getTradeDate(), trade.getSecurity(), remainingQuantity,buyCost, gainloss );
+
+
+            }
         }
 
 
     }
 
     private Position addBuy(Position previousPosition, Trade trade, Double previousQuantity, Double totalBuyQuantity) {
-        Double remainingQuantity = previousQuantity + totalBuyQuantity;
-        BigDecimal remainingCost = previousPosition.getCost().add(trade.getAmount());
+        Double newQuantity = previousQuantity + totalBuyQuantity;
+        BigDecimal newCost = previousPosition.getCost().add(trade.getAmount());
 
-        return new Position(trade.getTradeDate(), trade.getSecurity(), remainingQuantity, remainingCost, BigDecimal.ZERO);
+        return new Position(trade.getTradeDate(), trade.getSecurity(), newQuantity, newCost, BigDecimal.ZERO);
     }
 }

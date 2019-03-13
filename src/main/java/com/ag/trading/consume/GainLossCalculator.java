@@ -1,10 +1,7 @@
 package com.ag.trading.consume;
 
 import com.ag.trading.data.*;
-import com.ag.trading.data.strategy.BuyStrategy;
-import com.ag.trading.data.strategy.DividendStrategy;
-import com.ag.trading.data.strategy.SellStrategy;
-import com.ag.trading.data.strategy.TransactionTypeStrategy;
+import com.ag.trading.data.strategy.*;
 import com.google.common.collect.ImmutableMap;
 
 import java.time.LocalDate;
@@ -16,7 +13,7 @@ public class GainLossCalculator implements Consumer<Trade> {
     private ImmutableMap<String, TransactionTypeStrategy> transactionTypeStrategyMap = ImmutableMap.of(
             "Buy", new BuyStrategy(),
             "Sell", new SellStrategy(),
-            "Dividend", new DividendStrategy()
+            "Dividend", (previousPosition, trade)-> previousPosition
     );
 
     @Override
@@ -49,8 +46,7 @@ public class GainLossCalculator implements Consumer<Trade> {
 
         Position newPosition = previousPosition;
         for (Trade tradeToApply : tradesToApply) {
-            TransactionTypeStrategy transactionTypeStrategy = transactionTypeStrategyMap.get(tradeToApply.getTransactionType());
-            newPosition = transactionTypeStrategy.compute(newPosition, tradeToApply);
+            newPosition = transactionTypeStrategyMap.get(tradeToApply.getTransactionType()).compute(newPosition, tradeToApply);
         }
 
         return newPosition;
